@@ -12,6 +12,7 @@ export enum CompanyTypes {
   visaCal = 'visaCal',
   max = 'max',
   leumiCard = 'leumiCard',
+  leumiCreditCard = 'leumiCreditCard',
   otsarHahayal = 'otsarHahayal',
   discount = 'discount',
   mizrahi = 'mizrahi',
@@ -45,6 +46,10 @@ export const SCRAPERS = {
   },
   [CompanyTypes.leumiCard]: { // TODO remove in Major version
     name: 'Leumi Card',
+    loginFields: ['username', PASSWORD_FIELD],
+  },
+  [CompanyTypes.leumiCreditCard]: {
+    name: 'Leumi Credit Card',
     loginFields: ['username', PASSWORD_FIELD],
   },
   [CompanyTypes.max]: {
